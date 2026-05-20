@@ -15,7 +15,7 @@
       }
 
       @page frontmatter {
-        @bottom {
+        @bottom-center {
           content: counter(page, lower-roman);
           font-family: 'Libre Baskerville', Georgia, serif;
           font-style: italic;
@@ -23,7 +23,7 @@
       }
 
       @page frontmatter:first {
-        @bottom {
+        @bottom-center {
           content: none;
         }
       }
@@ -136,7 +136,6 @@
         padding-bottom: 5px;
         margin-bottom: 0px;
         text-indent: 0px;
-        string-set: title contents;
         font-weight: bold;
       }
 
@@ -145,7 +144,7 @@
         font-weight: normal;
         font-size: 13pt;
         color: #2F5496;
-        string-set: none;
+        /* removed unsupported property 'string-set' for compatibility */
       }
 
       h3 {
@@ -315,9 +314,11 @@
         display: block;
       }
 
-      div.offscreen h2 {
-        prince-bookmark-level: none
-      }
+      /*div.offscreen h2 { */
+        /* prince-bookmark-level is a non-standard property used by PrinceXML.
+           Commented out to avoid warnings in other validators. */
+        /* prince-bookmark-level: none; */
+      /*} */ 
 
       div.cover {
         background-color: #442327;
@@ -503,6 +504,7 @@ The Bluebook® A Uniform System of Citation®</p>
           <li><a href="#r8-2-4" id="toc_r8-2-4" class="h5">R8.2.4    Use of parenthetical clauses to indicate changes to quotation</a></li>
           <li><a href="#r8-2-5" id="toc_r8-2-5" class="h5">R8.2.5    Parentheticals to indicate quotations within quotations</a></li>
           <li><a href="#r8-2-6" id="toc_r8-2-6" class="h5">R8.2.6   Unnecessary parentheticals</a></li>
+          <li><a href="#r8-2-7" id="toc_r8-2-7" class="h5">R8.2.7&#160;&#160;(Cleaned up)</a></li>
           <li><a href="#r8-3" id="toc_r8-3" class="h4">R8.3  Omissions in Quotations</a></li>
           <li><a href="#r8-3-1" id="toc_r8-3-1" class="h5">R8.3.1    Ellipses generally</a></li>
           <li><a href="#r8-3-2" id="toc_r8-3-2" class="h5">R8.3.2  Omission from the beginning of a quoted sentence</a></li>
@@ -561,9 +563,9 @@ The Bluebook® A Uniform System of Citation®</p>
           <li><a href="#r12" id="toc_r12" class="h3">R12  Court and Year</a></li>
           <li><a href="#r12-1" id="toc_r12-1" class="h4">R12.1  Overview of Court and Year</a></li>
           <li><a href="#r12-2" id="toc_r12-2" class="h4">R12.2   Court Abbreviations</a></li>
-          <li><a href="#r12-3" id="toc_r12-3" class="h5">R12.3  Intermediate appellate departments or divisions</a></li>
-          <li><a href="#r12-3-1" id="toc_r12-3-1" class="h5">R12.3.1  General rule of omission</a></li>
-          <li><a href="#r12-3-2" id="toc_r12-3-2" class="h5">R12.3.2  Exceptions for including intermediate appellate department or division   </a></li>
+          <li><a href="#r12-2-3" id="toc_r12-2-3" class="h5">R12.3  Intermediate appellate departments or divisions</a></li>
+          <li><a href="#r12-2-3-1" id="toc_r12-2-3-1" class="h5">R12.3.1  General rule of omission</a></li>
+          <li><a href="#r12-2-3-2" id="toc_r12-2-3-2" class="h5">R12.3.2  Exceptions for including intermediate appellate department or division   </a></li>
           <li><a href="#r12-3" id="toc_r12-3" class="h4">R12.3    Duplicative Court and Year Information</a></li>
           <li><a href="#r12-3-1" id="toc_r12-3-1" class="h5">R12.3.1  Court indicated by reporter</a></li>
           <li><a href="#r12-3-2" id="toc_r12-3-2" class="h5">R12.3.2  Year indicated in medium-neutral citation</a></li>
@@ -2158,8 +2160,8 @@ The Bluebook® A Uniform System of Citation®</p>
             </td>
           </tr>
         </table>
-        <h5 id="r12-3"><a href="#toc_r12-3">R12.3<span class="wide-space">  </span>Intermediate appellate departments or divisions</a></h5>
-        <h5 id="r12-3-1"><a href="#toc_r12-3-1">R12.3.1<span class="wide-space">  </span>General rule of omission</a></h5>
+        <h5 id="r12-2-3"><a href="#toc_r12-2-3">R12.3<span class="wide-space">  </span>Intermediate appellate departments or divisions</a></h5>
+        <h5 id="r12-2-3-1"><a href="#toc_r12-2-3-1">R12.3.1<span class="wide-space">  </span>General rule of omission</a></h5>
         <p>In general, do not indicate the departments or divisions of intermediate appellate courts.</p>
         <div class="example-box">
           <p class="example-title">Correct: </p>
@@ -2169,7 +2171,7 @@ The Bluebook® A Uniform System of Citation®</p>
           <p class="example-title">Incorrect: </p>
           <p class="example"><i>Hamel v. Emp. Sec. Dep't</i>, 966 P.2d 1282 (Wash. Ct. App., Div. 2 1998).</p>
         </div>
-        <h5 id="r12-3-2"><a href="#toc_r12-3-2">R12.3.2<span class="wide-space">  </span>Exceptions for including intermediate appellate department or division <span class="wide-space">  </span></a></h5>
+        <h5 id="r12-2-3-2"><a href="#toc_r12-2-3-2">R12.3.2<span class="wide-space">  </span>Exceptions for including intermediate appellate department or division <span class="wide-space">  </span></a></h5>
         <p>Where intermediate appellate departments or divisions are relevant to the point being made in the text, or where local the court rules require citations to include this information. See <a href="#t3">Table T3</a> for more information on state jurisdictions such as Florida and Texas where this information is required and where the format for such citations varies in local practice. For standard legal documents seeking a uniform national approach, add the department or division information to be clear and, if possible, consistent with the general uniform standard for citations to intermediate appellate courts.</p>
         <div class="example-box">
           <p class="example-title">Example: </p>
@@ -2780,7 +2782,7 @@ The Bluebook® A Uniform System of Citation®</p>
         <h5 id="r19-3-2"><a href="#toc_r19-3-2">R19.3.2<span class="wide-space">  </span>Arbitrations</a></h5>
         <p>Agency arbitrations follow the format for case citations (<a href="#r11">Rule R11</a>) if they have adversary parties and the citation for an agency adjudication (<a href="#r19-3-1">Rule R19.3.1</a>) if they do not. Indicate the arbitrator’s name and abbreviated title Arb. at the end of the citation.</p>
         <h5 id="r19-3-3"><a href="#toc_r19-3-3">R19.3.3<span class="wide-space">  </span>Parallel citations</a></h5>
-        <p>Provide a citation to an official or unofficial reporter if available. If an official publication is not available at all or not yet for the adjudication, cite to the agency’s website using a similar format to citing unpublished cases (<a href="#r11-3-4">Rule R11.3.4</a>) and electronic sources (<a href="#r32">Rule R32</a>). A citation to a proprietary database is permitted and may be helpful but is not required. </p>
+        <p>Provide a citation to an official or unofficial reporter if available. If an official publication is not available at all or not yet for the adjudication, cite to the agency’s website using a similar format to citing unpublished cases (<a href="#r11-4">Rule R11.4</a>) and electronic sources (<a href="#r32">Rule R32</a>). A citation to a proprietary database is permitted and may be helpful but is not required. </p>
         <div class="example-box">
           <p class="example-title">Examples: </p>
           <p class="example"><i>Landrys Inc.</i>, 199 L.R.R.M. (BL) ¶ 2103 (N.L.R.B. Div. of Judges June 26, 2014). </p>
@@ -8150,7 +8152,7 @@ The Bluebook® A Uniform System of Citation®</p>
             <td colspan="3" class="grey-box">
               <p><b>Local Notes: </b></p>
               <p>Florida statutes are customarily cited with section first: § xx.xxx, Fla. Stat. (2020). </p>
-              <p>At the intermediate appellate level, the Florida courts are divided into five District Courts of Appeal. Citations indicate the applicable District Court of Appeal, abbreviated as DCA. <i>See </i>Fla. R. App. P. 8.800<i>; Indigo Book</i> <a href="#r12-1-2">Rule R12.1.2</a>.</p>
+              <p>At the intermediate appellate level, the Florida courts are divided into five District Courts of Appeal. Citations indicate the applicable District Court of Appeal, abbreviated as DCA. <i>See </i>Fla. R. App. P. 8.800<i>; Indigo Book</i> <a href="#r12-3">Rule R12.3</a>.</p>
               <p><b>Example:<span class="wide-space">  </span></b><i>Saldana v. State</i>, 295 So. 3d 1235 (Fla. 1st DCA 2020).</p>
               <p><i>See generally<b> </b>Florida Style Manual</i> (Florida State Univ. Law Rev., eds.,<b> </b>8th ed. 2019), https://www.floridastylemanual.com/</p>
             </td>
